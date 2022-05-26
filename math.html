@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>title</title>
+    </head>
+    <body>
+        <h1 onclick="numbergen()">여기를 눌러 숫자 생성</h1>
+        <div id="textbox1"></div>
+        <div id="textbox2"></div>
+        <script>
+            function numbergen(){
+                var number = Math.floor(Math.random()*6)+1;
+                document.getElementById("textbox1").innerHTML = number;
+                if(number%2 == 0 && number>=5){
+                    document.getElementById("textbox2").innerHTML = "5 이상인 짝수입니다";
+                }
+				else if(number%2 == 0){
+				    document.getElementById("textbox2").innerHTML = "짝수입니다";
+				}
+				else
+				{
+				    document.getElementById("textbox2").innerHTML = "";
+				}
+            }
+</script>
+</body>
+</html>
